@@ -1,0 +1,15 @@
+{
+    "description": "A simple Phalcon CLI project",
+    "type": "project",
+    "require": {
+        "phalcon/phalcon": "^5.8.0",
+        "php": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
