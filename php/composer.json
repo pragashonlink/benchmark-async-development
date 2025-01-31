@@ -2,8 +2,10 @@
     "description": "A simple Phalcon CLI project",
     "type": "project",
     "require": {
-        "phalcon/phalcon": "^5.8.0",
-        "php": "^8.2"
+        "danzabar/phalcon-cli": "1.x",
+        "guzzlehttp/guzzle": "^7.9",
+        "react/event-loop": "^0.4.3",
+        "react/http": "^0.4.0"
     },
     "autoload": {
         "psr-4": {

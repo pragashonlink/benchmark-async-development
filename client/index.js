@@ -10,8 +10,7 @@ function sleepSync(ms) {
 }
 
 app.get("/health", async (req, res) => {
-    sleepSync(30000);
-    res.json({ message: "This will block the entire server for 30 seconds!" });
+    res.json({ message: "success" });
 });
 
 // Start the server

@@ -1,0 +1,27 @@
+Factor	            Parallel Requests (Concurrency)	                    Sub-Processes
+Performance	        ✅ Faster overall execution (lower overhead)	        ❌ Slower due to process creation overhead
+Resource Usage	    ✅ Lower (1 PHP process handling multiple calls)	    ❌ Higher (multiple PHP processes)
+Error Handling	    ✅ Easier (centralized handling)	                    ❌ Harder (errors across multiple processes)
+Scalability	        ✅ Works well for moderate API calls (20-50)	        ✅ Better for 100+ API calls if well-managed
+Process Isolation	❌ If one request fails, it may impact others	    ✅ Each request is independent
+
+
+Concurrency
+- Low overhead than sub processes
+- Faster overall execution
+- Easier to manage and debug
+- When combined with batching then, scales well
+- Need to handle errors properly
+
+
+Guzzle uses ReactPhp's eventloop
+
+Sub-process
+- Heavy over head spawning new processes
+- CPU & Memory consumption will be high
+- Hard to maintain, we won't know whether the sub process actually finished
+- Easy to skip errors
+
+Some more things
+- Run separate cron jobs for each PMS type
+- Use a queue 
