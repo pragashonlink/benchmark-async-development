@@ -8,7 +8,6 @@ class ComposerStaticInit69062eba5c22bb92452df1c4945f430b
 {
     public static $files = array (
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
-        'ad155f8f1cf0d418fe49e248db8c661b' => __DIR__ . '/..' . '/react/promise/src/functions_include.php',
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
     );
@@ -17,14 +16,6 @@ class ComposerStaticInit69062eba5c22bb92452df1c4945f430b
         'S' => 
         array (
             'Symfony\\Component\\Process\\' => 26,
-        ),
-        'R' => 
-        array (
-            'React\\Stream\\' => 13,
-            'React\\Socket\\' => 13,
-            'React\\Promise\\' => 14,
-            'React\\Http\\' => 11,
-            'React\\EventLoop\\' => 16,
         ),
         'P' => 
         array (
@@ -51,26 +42,6 @@ class ComposerStaticInit69062eba5c22bb92452df1c4945f430b
         'Symfony\\Component\\Process\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/process',
-        ),
-        'React\\Stream\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/react/stream/src',
-        ),
-        'React\\Socket\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/react/socket/src',
-        ),
-        'React\\Promise\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/react/promise/src',
-        ),
-        'React\\Http\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/react/http',
-        ),
-        'React\\EventLoop\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/react/event-loop/src',
         ),
         'Psr\\Http\\Message\\' => 
         array (
@@ -103,23 +74,6 @@ class ComposerStaticInit69062eba5c22bb92452df1c4945f430b
         ),
     );
 
-    public static $prefixesPsr0 = array (
-        'G' => 
-        array (
-            'Guzzle\\Parser' => 
-            array (
-                0 => __DIR__ . '/..' . '/guzzle/parser',
-            ),
-        ),
-        'E' => 
-        array (
-            'Evenement' => 
-            array (
-                0 => __DIR__ . '/..' . '/evenement/evenement/src',
-            ),
-        ),
-    );
-
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
@@ -129,7 +83,6 @@ class ComposerStaticInit69062eba5c22bb92452df1c4945f430b
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit69062eba5c22bb92452df1c4945f430b::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit69062eba5c22bb92452df1c4945f430b::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit69062eba5c22bb92452df1c4945f430b::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit69062eba5c22bb92452df1c4945f430b::$classMap;
 
         }, null, ClassLoader::class);

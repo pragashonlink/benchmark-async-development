@@ -7,11 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Symfony\\Component\\Process\\' => array($vendorDir . '/symfony/process'),
-    'React\\Stream\\' => array($vendorDir . '/react/stream/src'),
-    'React\\Socket\\' => array($vendorDir . '/react/socket/src'),
-    'React\\Promise\\' => array($vendorDir . '/react/promise/src'),
-    'React\\Http\\' => array($vendorDir . '/react/http'),
-    'React\\EventLoop\\' => array($vendorDir . '/react/event-loop/src'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-factory/src', $vendorDir . '/psr/http-message/src'),
     'Psr\\Http\\Client\\' => array($vendorDir . '/psr/http-client/src'),
     'GuzzleHttp\\Psr7\\' => array($vendorDir . '/guzzlehttp/psr7/src'),
