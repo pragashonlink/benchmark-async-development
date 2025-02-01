@@ -3,9 +3,7 @@
     "type": "project",
     "require": {
         "danzabar/phalcon-cli": "1.x",
-        "guzzlehttp/guzzle": "^7.9",
-        "react/event-loop": "^0.4.3",
-        "react/http": "^0.4.0"
+        "guzzlehttp/guzzle": "^7.9"
     },
     "autoload": {
         "psr-4": {

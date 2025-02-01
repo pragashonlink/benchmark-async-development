@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 use GuzzleHttp\Client;
 
@@ -15,7 +15,7 @@ $ping = function($client) {
 
 $start_time = microtime(true);
 for ($i = 1; $i <= 1000; $i++) {
-    echo "ping request $i";
+    echo "ping request $i \n";
     $ping($client);
 }
 $end_time = microtime(true);

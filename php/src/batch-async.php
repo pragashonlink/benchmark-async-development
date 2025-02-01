@@ -1,20 +1,22 @@
 <?php
-require 'vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Promise\Utils;
 
-// List of 10,000 API URLs
-$apiUrls = []; // Populate this with 10,000 API URLs
-for ($i = 1; $i <= 10000; $i++) {
-    $apiUrls[] = "https://api.example.com/healthcheck/$i";
+$client = new Client();
+
+$start_time = microtime(true);
+$urls = [];
+for ($i = 1; $i <= 1000; $i++) {
+    $urls[] = "https://jsonplaceholder.typicode.com/posts/1";
 }
 
 // Configure concurrency and batching
 $client = new Client(['timeout' => 5]); // Set timeout for each API call
 $batchSize = 50; // Number of concurrent requests per batch
-$totalApis = count($apiUrls);
-$batches = array_chunk($apiUrls, $batchSize);
+$totalApis = count($urls);
+$batches = array_chunk($urls, $batchSize);
 
 foreach ($batches as $index => $batch) {
     echo "Processing batch " . ($index + 1) . "/" . count($batches) . "\n";
@@ -39,5 +41,7 @@ foreach ($batches as $index => $batch) {
     // Optional: Add a short delay between batches to prevent overwhelming the system
     usleep(500000); // 500ms delay
 }
+$end_time = microtime(true);
+$elapsed_time = number_format($end_time - $start_time, 2);
 
-echo "Health check completed for all APIs!";
+echo "Health check completed for all APIs! It took $elapsed_time";

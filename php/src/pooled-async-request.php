@@ -1,16 +1,14 @@
 <?php
 
 use GuzzleHttp\Client;
-use GuzzleHttp\Promise\Utils;
 use GuzzleHttp\Pool;
 
-require 'vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 $client = new Client();
 
 $urls = [];
 for ($i = 1; $i <= 1000; $i++) {
-    echo $i;
     $urls[] = "https://jsonplaceholder.typicode.com/posts/1";
 }
 
