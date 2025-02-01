@@ -6,6 +6,4 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Guzzle\\Parser' => array($vendorDir . '/guzzle/parser'),
-    'Evenement' => array($vendorDir . '/evenement/evenement/src'),
 );
